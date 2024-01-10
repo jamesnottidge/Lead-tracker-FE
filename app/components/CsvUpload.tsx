@@ -1,10 +1,11 @@
 "use client";
 
 import React, { useState } from "react";
+import { Item } from "../page";
 
 type Props = {
-  jsonData: [{}];
-  setJsonData: (jsonData: [{}]) => void;
+  jsonData: Item[];
+  setJsonData: (jsonData: Item[]) => void;
 };
 
 const CsvUpload = ({ jsonData, setJsonData }: Props) => {
@@ -48,7 +49,7 @@ const CsvUpload = ({ jsonData, setJsonData }: Props) => {
 
       {jsonData ? (
         <div className="json-container">
-          <pre>{JSON.stringify(jsonData, null, 2)}</pre>
+          {/* <pre>{JSON.stringify(jsonData, null, 2)}</pre> */}
         </div>
       ) : (
         <p>Please select a CSV file.</p>
